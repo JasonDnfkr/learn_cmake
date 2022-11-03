@@ -1,0 +1,10 @@
+^E:\DATA\WORK\JOB\LEARN_CMAKE\CMAKE-EXAMPLES\CMAKELISTS.TXT
+setlocal
+E:\Environment\cmake-3.25.0-rc3-windows-x86_64\bin\cmake.exe -SE:/Data/Work/Job/learn_cmake/cmake-examples -BE:/Data/Work/Job/learn_cmake/cmake-examples/build --check-stamp-file E:/Data/Work/Job/learn_cmake/cmake-examples/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

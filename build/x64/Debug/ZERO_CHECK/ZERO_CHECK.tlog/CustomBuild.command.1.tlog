@@ -1,0 +1,10 @@
+^E:\DATA\WORK\JOB\LEARN_CMAKE\CMAKE-EXAMPLES\BUILD\CMAKEFILES\24F3B9D11199DC67224D6A6DE51B8F3A\GENERATE.STAMP.RULE
+setlocal
+E:\Environment\cmake-3.25.0-rc3-windows-x86_64\bin\cmake.exe -SE:/Data/Work/Job/learn_cmake/cmake-examples -BE:/Data/Work/Job/learn_cmake/cmake-examples/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file E:/Data/Work/Job/learn_cmake/cmake-examples/build/hello_headers.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
